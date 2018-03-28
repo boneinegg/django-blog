@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--bootstrap-->
+    <link href="/blog/apps/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/blog/apps/static/css/bootstrap-theme.css" rel="stylesheet">
+    <script src="/blog/apps/static/js/jquery.js"></script>
+    <script src="/blog/apps/static/js/bootstrap.js"></script>
+    <!--vue-->
+    <script src="/blog/apps/static/js/vue.js"></script>
+    <title>Test</title>
+</head>
+<body>
+<nar class="navbar navbar-inverse">
+    <ul class="navbar-header">
+        <a class="navbar-brand" href="#">Test</a>
+    </ul>
+</nar>
+
+<div class="container container-center jumbotron">
+    <div class="col-sm-4 col-sm-offset-4">
+        <div id="app" class="form-group">
+            <p class="form-control" v-text="aaa"></p>
+            <span>Input: </span>
+            <input class="form-control" v-model="aaa">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var m = new Vue({
+        el: '#app',
+        data: {
+            aaa: '',
+        }
+    })
+</script>
+</body>
+</html>
